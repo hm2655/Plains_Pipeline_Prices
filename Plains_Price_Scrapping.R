@@ -18,9 +18,13 @@ for(i in 1:length(link_list))
 
 a<-a[a[,1]!="true"]
 
-nrow(a)for(i in 1:length(a))
+
+for(i in 1:length(a))
 {
-  link<-paste("https://www.plainsallamerican.com",a[1], sep="")
+  link<-paste("https://www.plainsallamerican.com",a[i], sep="")
+  print(link)
   dest<-paste(i,".pdf", sep="")
-  download.file(url, destfile = dest, mode = "wb")
+  download.file(link, destfile = dest, mode = "wb")
 }
+
+
